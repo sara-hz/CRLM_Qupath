@@ -1,0 +1,5 @@
+/// Script by Peter Bankhead
+
+def toRemove = getAllObjects().findAll {it.hasROI() && (it.getROI().getBoundsWidth() <= 0 || it.getROI().getBoundsHeight() <= 0)}
+
+removeObjects(toRemove, true)
