@@ -1,13 +1,13 @@
 
 /// Original script from Github, modified by Sara Harrizi
-/// Merging multiple annotations and substracting them from another annotation.
+/// Merging multiple annotations and subtracting them from another annotation.
 
 /// Merging Portal Zones
 
 selectObjects {it.isAnnotation() && it.getPathClass() == getPathClass("Portal Zone")}
 mergeSelectedAnnotations()
 
-/// Substracting Portal Zones from Outer Margins
+/// Subtracting Portal Zones from Outer Margins
 
 def OuterMargin = getAnnotationObjects().find {it.getPathClass() == getPathClass("OuterMargin")}
 def PZ = getAnnotationObjects().find {it.getPathClass() == getPathClass("Portal Zone")}
@@ -35,7 +35,7 @@ else {**/
     println "Outer MargiN created"
 
 
-/// Substracting Portal Zones from Outer Margins
+/// Subtracting Portal Zones from Outer Margins
 
 def InnerMargin = getAnnotationObjects().find {it.getPathClass() == getPathClass("Invasion front")}
 
